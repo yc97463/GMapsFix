@@ -15,7 +15,7 @@ async function generateHtmlWithMetadata(url) {
     // console.log(JSON.stringify(result, null, 3));   
     return result;
   })
-  let title = metadata.og.title;
+  let title = metadata.og.title.split(" · ")[0];
   let description = metadata.og.description || "";
   let img = metadata.og.image || "https://maps.dstw.dev/og.jpg"
   let html = `
