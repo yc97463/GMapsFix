@@ -51,10 +51,18 @@ async function generateHtmlWithMetadata(url) {
 
     <!-- Redirect to Google Maps -->
     <meta http-equiv="refresh" content="2; url = ${url}" />
+
+    <style>
+      .message {
+        margin: 5px 10px;
+      }
+    </style>
     
   </head>
   <body>
-    Google Maps 分享連結預覽好幫手🙌 正在帶您到 <code>${url}</code>。
+    <div class="message">
+      Google Maps 分享連結預覽好幫手 🙌 正在帶您前往 <code>${url}</code>。
+    </div>
   </body>
   </html>
   `
