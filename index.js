@@ -53,8 +53,9 @@ async function generateHtmlWithMetadata(url) {
     <meta http-equiv="refresh" content="2; url = ${url}" />
 
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
       * {
-        font-family: "Heiti TC", "Noto Sans TC";
+        font-family: "Heiti TC", "Noto Sans TC", sans-serif;
       }
       .message {
         margin: 20px 10px;
