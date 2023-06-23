@@ -1,12 +1,15 @@
-FROM node:18-slim
+FROM node:18
 
-WORKDIR /app
+WORKDIR /usr/src/app
+COPY package*.json ./
 
-COPY ./package.json ./
-COPY ./package-lock.json ./
+RUN apt update && apt install tzdata -y
+ENV TZ="Asia/Taipei"
+
+ARG PRIVATE_REPO_TOKEN
 RUN npm install
+RUN npm install pm2 -g
 
-COPY . /app
-EXPOSE 3000
+COPY . .
 
-CMD ["nodemon", "index.js"]
+CMD ["pm2-runtime", "index.js"]
