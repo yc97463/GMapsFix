@@ -1,4 +1,4 @@
-![](https://github.com/yc97463/GMapsFix/blob/main/public/og.jpg?raw=true)
+![](https://maps.dstw.dev/og.jpg)
 
 # Google Maps 分享連結預覽好幫手
 
@@ -9,3 +9,9 @@
 ### 直接使用
 
 在 Google 地圖複製連結後，將連結中的 `https://goo.gl` 或 `https://maps.app.goo.gl` 替換成 `https://maps.dstw.dev` 即可。
+
+![](https://maps.dstw.dev/assets/1share.jpg)
+
+![](https://maps.dstw.dev/assets/2paste.jpg)
+
+![](https://maps.dstw.dev/assets/3edit.jpg)
