@@ -18,6 +18,6 @@
 
 ### iOS/iPadOS 分享捷徑
 
-[點此安裝](https://www.icloud.com/shortcuts/c0ce7e020da14f14b4bb2687a2ecd334) iOS/iPadOS 捷徑，在分享時快速轉成 `maps.dstw.dev` 的地標連結。
+[點此安裝](https://www.icloud.com/shortcuts/c0ce7e020da14f14b4bb2687a2ecd334) iOS/iPadOS 捷徑，在分享時快速轉成並複製 `maps.dstw.dev` 開頭的地標連結。
 
 <img src="https://maps.dstw.dev/assets/ios-shortcut.jpeg" width="250">
