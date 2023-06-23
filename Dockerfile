@@ -1,5 +1,8 @@
 FROM node:18
 
+RUN apt update && apt install tzdata -y
+ENV TZ="Asia/Taipei"
+
 WORKDIR /usr/src/app
 COPY package*.json ./
 
