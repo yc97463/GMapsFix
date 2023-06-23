@@ -10,6 +10,54 @@ const router = new Router();
 
 app.use(serve(path.join(__dirname, 'public')));
 
+async function generateHtmlWithMetadata(url) {
+  const metadata = await parser(url).then(result=>{
+    // console.log(JSON.stringify(result, null, 3));   
+    return result;
+  })
+  let title = metadata.og.title;
+  let description = metadata.og.description || "";
+  let img = metadata.og.image
+  let html = `
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>${title}</title>
+    <meta name="title" content="${title}" />
+    <meta name="description" content="${description}" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="${url}" />
+    <meta property="og:site_name" content="${title}" />
+    <meta property="og:title" content="${title}" />
+    <meta property="og:description" content="${description}" />
+    <meta property="og:image" content="${img}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="${url}" />
+    <meta name="twitter:title" content="${title}" />
+    <meta name="twitter:description" content="${description}" />
+    <meta name="twitter:image" content="${img}" />
+
+    <!-- Telegram -->
+    <meta property="og:image" content="${img}" />
+    <meta property="telegram_channel" content="turbolabit">
+
+    <!-- Redirect to Google Maps -->
+    <meta http-equiv="refresh" content="0; url = ${url}" />
+    
+  </head>
+  <body></body>
+  </html>
+  `
+  return html;
+}
+
 router.get('/', async (ctx, next) => {
   let title = "Google Maps 分享連結預覽好幫手🙌";
   let description = "這裡是 Google Maps 分享連結預覽好幫手🙌。 maps.dstw.dev";
@@ -58,16 +106,9 @@ router.get('/', async (ctx, next) => {
 router.get('/maps/:id', async (ctx, next) => {
   const url = `https://goo.gl/maps/${ctx.params.id}`;
   // console.log(ctx.params.id);
-  const metadata = await parser(url).then(result=>{
-    // console.log(JSON.stringify(result, null, 3));   
-    return result;
-  })
-  ctx.body = `
-  <meta content="${metadata.og.title}" property="og:title"> 
-  <meta content="${metadata.og.image}" property="og:image">
-  <meta content="${metadata.og.description || ""}" property="og:description">
-  <meta http-equiv="refresh" content="0; url = ${url}" />
-  `;
+  
+  ctx.body = await generateHtmlWithMetadata(url);
+  ctx.type = 'text/html';
 });
 
 router.get('/:id', async (ctx, next) => {
@@ -75,12 +116,8 @@ router.get('/:id', async (ctx, next) => {
   const metadata = await parser(url).then(result=>{ 
     return result;
   })
-  ctx.body = `
-  <meta content="${metadata.og.title}" property="og:title"> 
-  <meta content="${metadata.og.image}" property="og:image">
-  <meta content="${metadata.og.description || ""}" property="og:description">
-  <meta http-equiv="refresh" content="0; url = ${url}" />
-  `;
+  ctx.body = await generateHtmlWithMetadata(url);
+  ctx.type = 'text/html';
 });
 
 app
