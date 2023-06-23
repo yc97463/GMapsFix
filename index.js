@@ -15,7 +15,8 @@ async function generateHtmlWithMetadata(url) {
     // console.log(JSON.stringify(result, null, 3));   
     return result;
   })
-  let title = `${(metadata.og.title).replace(`"`, `&#34;`).split(" · ")[0] || metadata.og.title} &#128588; Google Maps分享連結預覽好幫手`;
+  // .replace(`"`, `&#34;`)
+  let title = `${(metadata.og.title).split(" · ")[0] || metadata.og.title} &#128588; Google Maps分享連結預覽好幫手`;
   let description = `${metadata.og.description || ""}${metadata.og.description!=null?" - ":""}${metadata.og.title}`;
   let img = metadata.og.image || "https://maps.dstw.dev/og.jpg"
   let html = `
