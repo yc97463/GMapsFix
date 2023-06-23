@@ -7,7 +7,7 @@ const app = new Koa();
 const router = new Router();
 
 router.get('/', async (ctx, next) => {
-  ctx.body = '這裡是 Google Maps 連結預覽好幫手';
+  ctx.body = '這裡是 Google Maps 分享連結預覽好幫手🙌。 maps.dstw.dev';
 });
 
 router.get('/maps/:id', async (ctx, next) => {
@@ -17,7 +17,19 @@ router.get('/maps/:id', async (ctx, next) => {
     // console.log(JSON.stringify(result, null, 3));   
     return result;
   })
-  // ctx.body = resp.og.title;
+  ctx.body = `
+  <meta content="${metadata.og.title}" property="og:title"> 
+  <meta content="${metadata.og.image}" property="og:image">
+  <meta content="${metadata.og.description || ""}" property="og:description">
+  <meta http-equiv="refresh" content="0; url = ${url}" />
+  `;
+});
+
+router.get('/:id', async (ctx, next) => {
+  const url = `https://maps.app.goo.gl/${ctx.params.id}`;
+  const metadata = await parser(url).then(result=>{ 
+    return result;
+  })
   ctx.body = `
   <meta content="${metadata.og.title}" property="og:title"> 
   <meta content="${metadata.og.image}" property="og:image">
