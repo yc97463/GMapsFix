@@ -53,15 +53,32 @@ async function generateHtmlWithMetadata(url) {
     <meta http-equiv="refresh" content="2; url = ${url}" />
 
     <style>
+      * {
+        font-family: "Heiti TC", "Noto Sans TC";
+      }
       .message {
-        margin: 5px 10px;
+        margin: 20px 10px;
+      }
+      .message a {
+        background: #0D5C33;
+        padding: 4px 10px;
+        color: #FFF;
+        border-radius: 15px;
+        text-decoration: none;
+      }
+      .message a:hover, .message a:active {
+        color: #FFF;
+        text-decoration: none;
+      }
+      .message a::before {
+        content: "🔗 ";
       }
     </style>
     
   </head>
   <body>
     <div class="message">
-      Google Maps 分享連結預覽好幫手 🙌 正在帶您前往 <code>${url}</code>。
+      Google Maps 分享連結預覽好幫手 🙌 正在帶您前往 <a href="${url}">${url}</a>。
     </div>
   </body>
   </html>
