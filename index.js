@@ -21,6 +21,7 @@ router.get('/maps/:id', async (ctx, next) => {
   ctx.body = `
   <meta content="${metadata.og.title}" property="og:title"> 
   <meta content="${metadata.og.image}" property="og:image">
+  <meta content="${metadata.og.description || ""}" property="og:description">
   <meta http-equiv="refresh" content="0; url = ${url}" />
   `;
 });
