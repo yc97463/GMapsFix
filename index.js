@@ -16,7 +16,7 @@ async function generateHtmlWithMetadata(url) {
     return result;
   })
   // .replace(`"`, `&#34;`)
-  let title = `${(metadata.og.title).split(" · ")[0] || metadata.og.title} &#128588; Google Maps分享連結預覽好幫手`;
+  let title = `${(metadata.og.title).split(" · ")[0] || metadata.og.title} &#128588; Google Maps 分享連結預覽好幫手`;
   let description = `${metadata.og.description || ""}${metadata.og.description!=null?" - ":""}${metadata.og.title}`;
   let img = metadata.og.image || "https://maps.dstw.dev/og.jpg"
   let html = `
@@ -50,10 +50,12 @@ async function generateHtmlWithMetadata(url) {
     <meta property="telegram_channel" content="turbolabit">
 
     <!-- Redirect to Google Maps -->
-    <meta http-equiv="refresh" content="0; url = ${url}" />
+    <meta http-equiv="refresh" content="2; url = ${url}" />
     
   </head>
-  <body></body>
+  <body>
+    Google Maps 分享連結預覽好幫手🙌 正在帶您到 <code>${url}</code>。
+  </body>
   </html>
   `
   return html;
