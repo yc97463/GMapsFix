@@ -1,0 +1,26 @@
+{
+  "name": "gmapsfix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yc97463/GMapsFix.git"
+  },
+  "author": "yc97463",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/yc97463/GMapsFix/issues"
+  },
+  "homepage": "https://github.com/yc97463/GMapsFix#readme",
+  "dependencies": {
+    "@koa/router": "^12.0.0",
+    "html-metadata-parser": "^2.0.4",
+    "koa": "^2.14.2",
+    "nodemon": "^2.0.22"
+  }
+}
