@@ -16,7 +16,7 @@ async function generateHtmlWithMetadata(url) {
     return result;
   })
   let title = `${metadata.og.title.split(" · ")[0] || metadata.og.title} | Google 地圖預覽好幫手`;
-  let description = metadata.og.title || "";
+  let description = `${metadata.og.description || ""}${metadata.og.description!=null?" - ":""}${metadata.og.title}`;
   let img = metadata.og.image || "https://maps.dstw.dev/og.jpg"
   let html = `
   <!DOCTYPE html>
