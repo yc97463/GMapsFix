@@ -71,7 +71,7 @@ async function generateHtmlWithMetadata(url) {
         text-decoration: none;
       }
       .message a::before {
-        content: "🔗 ";
+        content: "&#128279; ";
       }
     </style>
     
