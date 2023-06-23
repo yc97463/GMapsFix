@@ -18,7 +18,7 @@
 
 ### iOS/iPadOS 分享捷徑
 
-[點此新增](https://www.icloud.com/shortcuts/c0ce7e020da14f14b4bb2687a2ecd334) iOS/iPadOS 捷徑，在分享時快速複製 `maps.dstw.dev` 開頭的地圖連結。
+[點這裡新增](https://www.icloud.com/shortcuts/c0ce7e020da14f14b4bb2687a2ecd334) iOS/iPadOS 捷徑，在分享時快速複製 `maps.dstw.dev` 開頭的地圖連結。
 
 ![](https://maps.dstw.dev/assets/1share.jpg)
 
