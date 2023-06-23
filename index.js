@@ -60,7 +60,7 @@ async function generateHtmlWithMetadata(url) {
 
 router.get('/', async (ctx, next) => {
   let title = "Google Maps 分享連結預覽好幫手🙌";
-  let description = "這裡是 Google Maps 分享連結預覽好幫手🙌。 maps.dstw.dev";
+  let description = "這裡是 Google Maps 分享連結預覽好幫手🙌，協助修正 Google 地圖路線規劃、商家地標在社群媒體和通訊軟體中的連結預覽。";
   let img = `https://maps.dstw.dev/og.jpg`
   let url = `https://maps.dstw.dev/`
   let html = `
