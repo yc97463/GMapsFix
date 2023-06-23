@@ -12,11 +12,11 @@ steps:
       [
         "run",
         "deploy",
-        "SERVICE-NAME",
+        "gmapsfix",
         "--image",
         "gcr.io/$PROJECT_ID/gmapsfix-image",
         "--region",
-        "REGION",
+        "asia-east1",
       ]
 images:
   - "gcr.io/$PROJECT_ID/gmapsfix-image"
