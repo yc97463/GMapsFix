@@ -30,6 +30,6 @@
 
 > 感謝 [@GrassBlock1](https://github.com/GrassBlock1) 小夥伴提供在 Android 裝置的方法，來源：https://t.me/realGrassblock/6651 。
 
-[點這裡導入](tarnhelm://rule?regex=eyJhIjoiR21hcCBmaXgiLCJiIjpbIihodHRwfGh0dHBzKTpcL1wvbWFwcy5hcHAuZ29vLmdsIl0sImMiOlsiaHR0cHM6XC9cL21hcHMuZHN0dy5kZXYiXSwiZCI6InljOTc0NjMifQ%3D%3D) [Tarnhelm](https://github.com/lz233/Tarnhelm) 的規則設定，即可在分享時透過選單轉換分享。
+[點這裡閱讀](https://lab.imgb.space/demo/testing/gmaps) 在 [Tarnhelm](https://github.com/lz233/Tarnhelm) 的規則設定，即可在分享時透過選單轉換分享。
 
 <img src="https://maps.dstw.dev/assets/android-tarnhelm.jpg" width="250">
