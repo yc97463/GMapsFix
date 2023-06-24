@@ -28,7 +28,7 @@
 
 ### Android 分享規則
 
-> 感謝 [@GrassBlock1](https://github.com/GrassBlock1) 小夥伴提供在 Android 裝置的方法，來源：https://t.me/realGrassblock/6651 。
+> 感謝 [@GrassBlock1](https://github.com/GrassBlock1) 小夥伴分享在 Android 裝置的方法，來源：https://t.me/realGrassblock/6651 。
 
 [點這裡閱讀](https://lab.imgb.space/demo/testing/gmaps) 在 [Tarnhelm](https://github.com/lz233/Tarnhelm) 的規則設定，即可在分享時透過選單轉換分享。
 
