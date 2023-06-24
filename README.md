@@ -32,4 +32,4 @@
 
 [點這裡閱讀](https://lab.imgb.space/demo/testing/gmaps) 在 [Tarnhelm](https://github.com/lz233/Tarnhelm) 的規則設定，即可在分享時透過選單轉換分享。
 
-<img src="https://maps.dstw.dev/assets/android-tarnhelm.jpg" width="250">
+<img src="https://maps.dstw.dev/assets/android-tarnhelm.gif" width="250">
